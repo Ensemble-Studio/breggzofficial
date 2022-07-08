@@ -23,7 +23,7 @@ const Box = (props) => {
 const Home = () => {
   return (
     <>
-      <main className='absolute top-0 left-0 w-1/2 h-screen px-16 z-40 flex flex-col justify-center items-center'>
+      <main className='absolute top-0 left-0 w-screen md:w-1/2 h-screen md:px-16 z-40 flex flex-col justify-center items-center'>
         <div className='flex flex-col justify-start items-center gap-8'>
           <div className='flex flex-col justify-start items-center relative gap-4'>
             <span className='leading-[80%] text-[120px] text-center uppercase text-[#f34606]'>
