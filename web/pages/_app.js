@@ -1,20 +1,12 @@
+import "../src/styles/globals.css";
 
-import '../src/styles/globals.css'
-
-
+import CookieProvider from "../src/lib/CookieProvider";
 function MyApp({ Component, pageProps }) {
-
-
-
-
   return (
-
-
-    <Component {...pageProps} />
-
-
-
-  )
+    <CookieProvider>
+      <Component {...pageProps} />
+    </CookieProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
