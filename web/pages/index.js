@@ -12,6 +12,7 @@ const Home = () => {
          
      {cookieAccepted &&
 <Script
+ id="pixelscript"
 strategy="afterInteractive"
 dangerouslySetInnerHTML={{
 __html: `
