@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-
 import Image from "next/image";
+
 const StayTuned = () => {
   const [usps, setUsps] = useState([
     "A++ audio experience",
@@ -17,7 +17,7 @@ const StayTuned = () => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 3,
+        staggerChildren: 4,
       },
     },
   };
@@ -30,7 +30,7 @@ const StayTuned = () => {
       opacity: 1,
     },
     transition: {
-      delay: 8,
+      delay: 11,
     },
   };
 
@@ -44,7 +44,7 @@ const StayTuned = () => {
       y: 0,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.8,
+        staggerChildren: 1,
         ease: "easeIn",
         duration: 1,
       },
@@ -81,22 +81,21 @@ const StayTuned = () => {
       opacity: [0, 1, 0],
       transition: {
         ease: "easeIn",
-        duration: 1,
+        duration: 2,
       },
     },
   };
 
-  return (
-    <div className='absolute top-0 w-full  h-full left-0  z-40'>
+  return ( <div className='absolute top-0 w-full md:w-1/2  h-full left-0 z-40'>
       <motion.div
         variants={contentVariant}
         animate='visible'
         initial='hidden'
-        className='flex flex-col top-0 left-0 absolute pl-10 justify-center items-start gap-8 h-screen w-screen md:w-1/2'
+        className='flex flex-col top-0 left-0 absolute md:pl-10 justify-center items-start gap-8 h-screen w-screen md:w-1/2'
       >
         <motion.div
           variants={uspBoxVariant}
-          className='flex flex-col md:pl-10 justify-center items-start gap-8 h-screen md:w-1/2'
+          className='flex flex-col  pl-2 md:pl-10 md:justify-center items-start gap-2 md:gap-8 h-screen md:w-1/2'
         >
           {usps.map((usp) => {
             return (
@@ -113,11 +112,11 @@ const StayTuned = () => {
 
         <motion.div
           variants={quotesVariant}
-          className='flex flex-col h-full w-full justify-center items-center gap-8 top-0 md:pl-10 left-0 absolute'
+          className='flex flex-col h-full w-full justify-center items-center gap-8 top-0  left-0  md:px-20  fixed'
         >
           <motion.h1
             variants={sloganVariant}
-            className='text-2xl text-center absolute'
+            className='text-2xl text-center absolute m-auto' 
           >
             The future of in-ear technology.
           </motion.h1>
@@ -142,27 +141,27 @@ const StayTuned = () => {
 
         <motion.div
           variants={stayTunedVariant}
-          className='flex flex-col h-full justify-center items-center gap-8 top-0 left-0 absolute'
+          className='flex flex-col fixed md:w-1/2 justify-center items-center gap-8 '
         >
-          <div className='flex flex-col justify-start items-center relative gap-4'>
-            <span className='leading-[80%] text-[120px] text-center uppercase text-[#f34606]'>
+          <div className='flex flex-col justify-center items-center relative gap-4'>
+            <span className='leading-[80%] text-8xl md:text-[120px] text-center uppercase text-[#f34606]'>
               stay tuned
             </span>
-            <p className=' opacity-80 text-sm italic text-left text-[#f34606]'>
+            <p className='opacity-80 text-sm italic text-left text-[#f34606]'>
               (pun intended)
             </p>
           </div>
           <div className='flex justify-start items-start  gap-[25px]'>
             <div className='flex flex-col justify-start items-start   '>
               <div className='flex justify-start items-start  relative gap-2'>
-                <div className='flex justify-start items-start relative gap-2 border-b  border-[#f34606]'>
+                {/* <div className='flex justify-start items-start relative gap-2 border-b  border-[#f34606]'>
                   <a className='text-lg text-left capitalize text-[#f34606]'>
                     Follow us
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
-          </div>{" "}
+          </div>
         </motion.div>
       </motion.div>
     </div>
