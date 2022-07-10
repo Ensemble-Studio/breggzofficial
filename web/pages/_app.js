@@ -24,6 +24,8 @@ src="https://www.facebook.com/tr?id=1387297948449771&ev=PageView
     content="minimum-scale=1, initial-scale=1, width=device-width"
   />
   <link rel="icon" href="/favicon.png" />
+  <link rel="icon" href="./breggz.svg" type="image/svg+xml" />
+
 </Head>
       <Component {...pageProps} />
     </CookieProvider>

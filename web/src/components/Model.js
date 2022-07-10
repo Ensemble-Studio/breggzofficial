@@ -14,7 +14,7 @@ export default function Model({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/breggz_render.gltf");
 
-  const [colorMap, normalMap, roughnessMap] = useLoader(TextureLoader, ['color.jpg', 'normal.jpg', 'roughness.jpg'])
+ 
 
 
   useFrame(
@@ -43,7 +43,7 @@ export default function Model({ ...props }) {
         <meshLambertMaterial 
           reflectivity={9}
           refractionRatio
-          envMap={normalMap}
+             
           opacity={0.9}
           side={THREE.FrontSide}
           transparent
@@ -94,7 +94,7 @@ export default function Model({ ...props }) {
         <meshLambertMaterial 
           reflectivity={9}
           refractionRatio
-          envMap={normalMap}
+             
           opacity={0.9}
           side={THREE.FrontSide}
           transparent
