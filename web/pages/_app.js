@@ -23,6 +23,8 @@ src="https://www.facebook.com/tr?id=1387297948449771&ev=PageView
     name="viewport"
     content="minimum-scale=1, initial-scale=1, width=device-width"
   />
+  <meta name="facebook-domain-verification" content="ezvrj6j3a4t6vmoeb9ymmd77ebp6sz" />
+
   <link rel="icon" href="/favicon.png" />
   <link rel="icon" href="./breggz.svg" type="image/svg+xml" />
 
