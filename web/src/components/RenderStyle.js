@@ -13,7 +13,7 @@ const Scene = () => {
   const shadow = useRef();
 
   return (
-    <Canvas shadows legacy={true} gl={{ alpha: true, physicallyCorrectLights: true }}>
+    <Canvas shadows legacy={true} gl={{ alpha: true, physicallyCorrectLights: true }}  performance={{ min: 0.5 }}>
 
      <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} />
        <PerspectiveCamera makeDefault position={[6,30,10]}/>
