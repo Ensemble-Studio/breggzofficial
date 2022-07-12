@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 // import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 import { useGLTF } from "@react-three/drei";
@@ -20,17 +20,27 @@ export default function ModelShadow({ ...props }) {
   })
   
 
- const [whiteGold] = useLoader(THREE.TextureLoader, ['../textures/whitegold.png'])
+//  const [whiteGold] = useLoader(THREE.TextureLoader, ['../textures/whitegold.png'])
 
- const [blueBlack] = useLoader(THREE.TextureLoader, ['../textures/blueblack.png'])
-const [greyMatte] = useLoader(THREE.TextureLoader, ['../textures/greymatte.jpeg'])
+//  const [blueBlack] = useLoader(THREE.TextureLoader, ['../textures/blueblack.png'])
+// const [greyMatte] = useLoader(THREE.TextureLoader, ['../textures/greymatte.jpeg'])
+
+//  const [matteBlack] = useLoader(THREE.TextureLoader, ['../textures/matteblack.png'])
+
+
+
 
  const [whiteMatte] = useLoader(THREE.TextureLoader, ['../textures/whitematte.jpeg'])
 
-//  const [matteBlack] = useLoader(THREE.TextureLoader, ['../textures/matteblack.png'])
  const [matteBlack] = useLoader(THREE.TextureLoader, ['../textures/lightgrey.png'])
         
   const group = useRef();
+  
+
+useEffect(() => {
+  useGLTF.preload("/breggz_render.glb");
+}, [])
+
   const { nodes, materials } = useGLTF("/breggz_render.glb");
   return (
     <group ref={group} {...props} dispose={null} rotation={[Math.PI / 4, 1.7, 1.1,]} position={[1, 1, 1]} >
@@ -281,7 +291,7 @@ const [greyMatte] = useLoader(THREE.TextureLoader, ['../textures/greymatte.jpeg'
   >
 
 
-  
+
  
 <meshMatcapMaterial matcap={whiteMatte} />
 
