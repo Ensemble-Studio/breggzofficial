@@ -118,7 +118,7 @@ const StayTuned = () => {
             </div>
           </div>
              <div className="w-full  mt-24 flex items-center justify-center">
-          {!playing && 
+        
      
         <button className="flex justify-center items-center relative gap-2.5 p-2 rounded-[5px]"  onClick={updatePlaying}>
   <p className="flex-grow-0 flex-shrink-0 opacity-90 text-sm text-left uppercase text-[#f34606]">
@@ -138,7 +138,7 @@ const StayTuned = () => {
       fill="#F34606"
     />
   </svg>
-</button>}
+</button>
         </div>
         </motion.div>
       
