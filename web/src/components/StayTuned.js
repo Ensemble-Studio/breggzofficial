@@ -109,7 +109,7 @@ const StayTuned = () => {
               <div className='flex justify-start items-start  relative gap-2'>
                 <button onClick={update} className='flex justify-start items-start relative gap-2 border-b  border-[#f34606]'>
                   <a className='text-lg text-left capitalize text-[#f34606]'>
-                    Follow us
+                   Stay in the loop
                   </a>
                 </button>
               
