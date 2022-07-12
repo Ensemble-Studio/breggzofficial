@@ -6,7 +6,7 @@ const Cookie = () => {
   if (!cookieAccepted)
     return (
       <div
-        className='flex md:flex-row flex-col justify-center items-center  overflow-hidden gap-5 px-5 md:px-4 py-5 rounded-[3px] bg-white absolute md:bottom-8 bottom-[8%] w-4/5 md:w-1/2 left-[10%] md:left-[25%] z-40'
+        className='flex md:flex-row flex-col justify-center items-center  overflow-hidden gap-5 px-5 md:px-4 py-5 rounded-[3px] bg-white absolute md:bottom-8 bottom-[14%] w-4/5 md:w-1/2 left-[10%] md:left-[25%] z-40'
         style={{ boxShadow: "0px 4px 10px 0 rgba(0,0,0,0.1)" }}
       >
         <p className='text-xl md:text-base text-left text-black uppercase tracking-widest'>Cookies</p>

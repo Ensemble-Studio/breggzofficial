@@ -1,19 +1,11 @@
-import { Canvas, useFrame, useLoader, extend } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 
 import { useRef, Suspense } from "react";
 
 import {
   OrbitControls,
-  Reflector,
-  useTexture,
-  Shadow,
-  SpotLight,
-  AmbientLight,
   PerspectiveCamera,
-  Environment,
-  Backdrop,
-  Base,
-  Stage
+
 } from "@react-three/drei";
 import Model from "./Model";
 

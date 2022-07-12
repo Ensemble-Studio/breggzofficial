@@ -1,11 +1,11 @@
 
 import React, { useRef } from "react";
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+// import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
-import { useGLTF, useNormalTexture, normRepeat,normalMap, matcap, Stage, useMatcapTexture, meshMatcapMaterial} from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
-import { Canvas, useFrame, useLoader, extend} from "@react-three/fiber";
+import {  useFrame, useLoader, } from "@react-three/fiber";
    
 export default function ModelShadow({ ...props }) {
 
@@ -23,11 +23,12 @@ export default function ModelShadow({ ...props }) {
  const [whiteGold] = useLoader(THREE.TextureLoader, ['../textures/whitegold.png'])
 
  const [blueBlack] = useLoader(THREE.TextureLoader, ['../textures/blueblack.png'])
+const [greyMatte] = useLoader(THREE.TextureLoader, ['../textures/greymatte.jpeg'])
 
+ const [whiteMatte] = useLoader(THREE.TextureLoader, ['../textures/whitematte.jpeg'])
 
- const [matteBlack] = useLoader(THREE.TextureLoader, ['../textures/matteblack.png'])
-
-
+//  const [matteBlack] = useLoader(THREE.TextureLoader, ['../textures/matteblack.png'])
+ const [matteBlack] = useLoader(THREE.TextureLoader, ['../textures/lightgrey.png'])
         
   const group = useRef();
   const { nodes, materials } = useGLTF("/breggz_render.glb");
@@ -214,7 +215,7 @@ export default function ModelShadow({ ...props }) {
         }
         rotation={[Math.PI / 2, 0, 0]}
         >
-        <meshMatcapMaterial  matcap={blueBlack}  />
+        <meshMatcapMaterial  matcap={matteBlack}  />
         </mesh>
 
 
@@ -228,7 +229,7 @@ export default function ModelShadow({ ...props }) {
         geometry={nodes["Earbud_Coen_Eartip_Foam_06-09-2022"].geometry}
         material={nodes["Earbud_Coen_Eartip_Foam_06-09-2022"].material}
         rotation={[Math.PI / 2, 0, 0]}>
-        <meshMatcapMaterial  matcap={blueBlack}  /></mesh>
+        <meshMatcapMaterial  matcap={whiteMatte}  /></mesh>
 
 
       <mesh
@@ -238,7 +239,7 @@ export default function ModelShadow({ ...props }) {
         material={nodes["Earbud_Coen_Eartip_Body_06-09-2022"].material}
         rotation={[Math.PI / 2, 0, 0]}
         >
-        <meshMatcapMaterial matcap={blueBlack}  />
+        <meshMatcapMaterial matcap={whiteMatte}  />
         </mesh>
       <mesh
         castShadow
@@ -246,7 +247,7 @@ export default function ModelShadow({ ...props }) {
         geometry={nodes["Earbud_Coen_Body_06-09-2022001"].geometry}
         material={nodes["Earbud_Coen_Body_06-09-2022001"].material}
         rotation={[Math.PI / 2, 0, 0]}
-      >   <meshMatcapMaterial matcap={blueBlack} />
+      >   <meshMatcapMaterial matcap={whiteMatte} />
 
 </mesh>
 </group>
@@ -267,7 +268,7 @@ export default function ModelShadow({ ...props }) {
           >
 
 
-       <meshMatcapMaterial  matcap={whiteGold} />
+       <meshMatcapMaterial  matcap={whiteMatte} />
 </mesh>
 <mesh
   
@@ -282,7 +283,7 @@ export default function ModelShadow({ ...props }) {
 
   
  
-<meshMatcapMaterial matcap={whiteGold} />
+<meshMatcapMaterial matcap={whiteMatte} />
 
 
   </mesh>

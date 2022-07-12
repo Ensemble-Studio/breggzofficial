@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import "../src/styles/globals.css";
 import CookieProvider from "../src/lib/CookieProvider";
+import SubscribeProvider from "../src/lib/SubscribeProvider"
+import AnimationProvider from "../src/lib/AnimationProvider"
 import Head from 'next/head';
+
 
 
 
@@ -9,7 +12,11 @@ function MyApp({ Component, pageProps }) {
   
   return (
 
+    <AnimationProvider>
     <CookieProvider>
+    
+      <SubscribeProvider>
+        
   
 <Head>
 
@@ -19,6 +26,9 @@ src="https://www.facebook.com/tr?id=1387297948449771&ev=PageView
 &noscript=1"/>
 </noscript>
   <title>BREGGZ</title>
+  <meta property="og:title" content={`BREGGZ | For Your Ears Only`} />
+      <meta property="og:site_name" content={`BREGGZ`} />
+      <meta property="og:image" content="https://breggzcom.vercel.app/ogImage.png" />
   <meta
     name="viewport"
     content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -30,7 +40,9 @@ src="https://www.facebook.com/tr?id=1387297948449771&ev=PageView
 
 </Head>
       <Component {...pageProps} />
+      </SubscribeProvider>
     </CookieProvider>
+    </AnimationProvider>
   );
 }
 

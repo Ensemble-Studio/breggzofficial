@@ -1,16 +1,20 @@
 import { useCookie } from "../src/lib/CookieProvider";
-
+import {useAnimationUpdate, useAnimationIntro} from '../src/lib/AnimationProvider';
+import {useState, useEffect} from 'react'
 import Cookie from "../src/components/Cookie";
 import Script from 'next/script';
 import StayTuned from "../src/components/StayTuned";
-import Render from "../src/components/Render";
+import RenderStyle from "../src/components/RenderStyle";
 const Home = () => {
+
   const cookieAccepted = useCookie();
+  const playing = useAnimationIntro();
+ const replayHandler = useAnimationUpdate();
 
   return (
-    <div className='w-screen h-screen bg-pearl fixed top-0 left-0'>
+    <div className='w-screen h-screen  fixed top-0 left-0'>
          
-     {cookieAccepted &&
+     {cookieAccepted  &&
 <Script
  id="pixelscript"
 strategy="afterInteractive"
@@ -29,9 +33,13 @@ fbq('track', 'PageView');
 `,
 }}
 />}
-      {cookieAccepted && <StayTuned />}
+      {cookieAccepted  && <StayTuned />}
+      {/* {!playing && 
+      <button className='w-80 fixed top-0 z-10 text-coral' onClick={replayHandler}>
+        <a>Replay Animation </a></button> }
+    */}
       <div className='w-screen h-screen '>
-        <Render />
+        <RenderStyle />
       </div>
       <Cookie />
     </div>
