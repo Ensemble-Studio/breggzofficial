@@ -100,9 +100,9 @@ const StayTuned = () => {
             <span className='leading-[80%] text-8xl md:text-[120px] text-center uppercase text-[#f34606]'>
               stay tuned 
             </span>
-            {/* <p className='opacity-80 text-sm italic text-[#f34606]'>
+            <p className='opacity-80 text-sm italic text-[#f34606]'>
               (pun intended)
-            </p> */}
+            </p>
          
           <div className='flex justify-start items-start  gap-[25px]'>
             <div className='flex flex-col justify-start items-start   '>

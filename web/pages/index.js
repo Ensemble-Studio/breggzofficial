@@ -34,10 +34,7 @@ fbq('track', 'PageView');
 }}
 />}
       {cookieAccepted  && <StayTuned />}
-      {/* {!playing && 
-      <button className='w-80 fixed top-0 z-10 text-coral' onClick={replayHandler}>
-        <a>Replay Animation </a></button> }
-    */}
+  
       <div className='w-screen h-screen '>
         <RenderStyle />
       </div>
